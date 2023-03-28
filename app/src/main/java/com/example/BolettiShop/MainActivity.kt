@@ -86,7 +86,17 @@ class MainActivity : AppCompatActivity() {
         fun setFM() {
             Log.i("MAINACTIVITY", " setFM")
             fragmentManager!!.beginTransaction()
+
                 .add(R.id.fragment_container, ProductFragment())
+                .commit()
+        }
+
+        @JvmStatic
+        fun updateFM() {
+            Log.i("MAINACTIVITY", " setFM")
+            fragmentManager!!.beginTransaction()
+
+                .replace(R.id.fragment_container, ProductFragment())
                 .commit()
         }
     }

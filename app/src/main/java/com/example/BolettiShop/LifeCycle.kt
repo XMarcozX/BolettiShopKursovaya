@@ -12,14 +12,34 @@ import com.google.firebase.database.DatabaseReference
 
 class LifeCycle : LifecycleObserver, LifecycleOwner {
 
+    var isStarted = false
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun initViewModel() {
         MainActivity.viewModel?.menu1Week?.observe(this,
             { menu1Weeks: List<Product>? -> MainActivity.product = menu1Weeks
                 if (check) {
-                    MainActivity.setFM()
-                } else if (RealtimeDB.i == menu1Weeks!!.size && menu1Weeks.isNotEmpty()) {
-                    MainActivity.setFM()
+                    if(isStarted)
+                    {
+                        MainActivity.updateFM()
+                    }
+                    else
+                    {
+                        MainActivity.setFM()
+                        isStarted = true;
+                    }
+
+                } else {
+                    if (RealtimeDB.i == menu1Weeks!!.size && menu1Weeks.isNotEmpty()) {
+                        if(isStarted)
+                        {
+                            MainActivity.updateFM()
+                        }
+                        else
+                        {
+                            MainActivity.setFM()
+                            isStarted = true;
+                        }
+                    }
                 }
                 Log.i("LIFECYCLE", "initViewModel " + menu1Weeks!!.size.toString())
             } as (List<Product?>?) -> Unit)
