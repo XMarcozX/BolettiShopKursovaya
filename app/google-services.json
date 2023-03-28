@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "396419857675",
+    "firebase_url": "https://perfect-piston-45805750.firebaseio.com",
+    "project_id": "perfect-piston-45805750",
+    "storage_bucket": "perfect-piston-45805750.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396419857675:android:a1a47e4cddb6b03236360e",
+        "android_client_info": {
+          "package_name": "com.example.BolettiShop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396419857675-f9d2g8fn78k61ne5iocqnoddnc7v41r2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.BolettiShop",
+            "certificate_hash": "4e710fc6dfd36d93d267ad1bf91a694f5a0bfecb"
+          }
+        },
+        {
+          "client_id": "396419857675-bfh88h9dt2gk5pq2h5cbm54ru03r6p9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6ifOT_TqCcIuKKV1oP_i69KyAtK2lCok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396419857675-bfh88h9dt2gk5pq2h5cbm54ru03r6p9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
